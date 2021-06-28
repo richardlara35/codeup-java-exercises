@@ -1,22 +1,49 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Strings {
-
+//    TODO: invoke a method that accepts (and returns) the following:
+//        - accepts: your first name and your last name. returns: A
+//        string that reads: "Hello Laura Ruiz-Roehrs (replace with your
+//        first and last)";
     public static void main(String[] args){
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Best basketball team in Texas?");
-        String userInput = sc.next();
-        System.out.println((print(userInput)));
-        System.out.println(length(print(userInput)));
-    }
-    public static String print(String userInput){
-        return "The " + userInput + " are the best team in Texas.";
+        Scanner sc = new Scanner (System.in);
+        System.out.println("Enter your full name");
+        String userName = sc.nextLine();
+        String[] array = userName.split(" ");
+        String firstName = array[0];
+        String lastName = array[1];
+        System.out.println(Names(userName));
+        System.out.println(Names(firstName, lastName));
+
     }
 
-    public static String length(String userInput){
-        return "There are " + userInput.length() + " characters in the string " + userInput;
+    public static String Names(String userName){
+        return "Hello " + userName;
     }
+
+    public static String Names(String firstName, String lastName){
+        return "Hello " + firstName + " " + lastName;
+    }
+
+
+
+//    public static void main(String[] args){
+//
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Best basketball team in Texas?");
+//        String userInput = sc.next();
+//        System.out.println((print(userInput)));
+//        System.out.println(length(print(userInput)));
+//    }
+//    public static String print(String userInput){
+//        return "The " + userInput + " are the best team in Texas.";
+//    }
+//
+//    public static String length(String userInput){
+//        return "There are " + userInput.length() + " characters in the string " + userInput;
+//    }
 
 
 
