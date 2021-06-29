@@ -6,26 +6,26 @@ public class Strings {
 //        - accepts: your first name and your last name. returns: A
 //        string that reads: "Hello Laura Ruiz-Roehrs (replace with your
 //        first and last)";
-    public static void main(String[] args){
-
-        Scanner sc = new Scanner (System.in);
-        System.out.println("Enter your full name");
-        String userName = sc.nextLine();
-        String[] array = userName.split(" ");
-        String firstName = array[0];
-        String lastName = array[1];
-        System.out.println(Names(userName));
-        System.out.println(Names(firstName, lastName));
-
-    }
-
-    public static String Names(String userName){
-        return "Hello " + userName;
-    }
-
-    public static String Names(String firstName, String lastName){
-        return "Hello " + firstName + " " + lastName;
-    }
+//    public static void main(String[] args){
+//
+//        Scanner sc = new Scanner (System.in);
+//        System.out.println("Enter your full name");
+//        String userName = sc.nextLine();
+//        String[] array = userName.split(" ");
+//        String firstName = array[0];
+//        String lastName = array[1];
+//        System.out.println(Names(userName));
+//        System.out.println(Names(firstName, lastName));
+//
+//    }
+//
+//    public static String Names(String userName){
+//        return "Hello " + userName;
+//    }
+//
+//    public static String Names(String firstName, String lastName){
+//        return "Hello " + firstName + " " + lastName;
+//    }
 
 
 
@@ -98,4 +98,23 @@ public class Strings {
 //            System.out.println("Congrats you're wrong");
 //        }
 //    }
+//    WARMUP
+//    TODO: prompt a user to tell us about themselves (age, name, if
+//     they have any pets (true/false). Using method overloading, create
+//     methods that will return the first fact they told us about
+//     themselves. ex: I can input: 18 -- Laura -- false in which case I
+//     expect you to return: 18. but if I tell you my name first: Laura --
+//     false -- 18. I expect you to return "Laura" ... etc.
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Hi, What's your name?");
+        String userName = sc.next();
+        System.out.println("How old are you");
+        int userAge = sc.nextInt();
+        System.out.println("Do you have any pets?");
+        boolean petsOrNah = sc.nextBoolean();
+
+
+
+    }
 }
