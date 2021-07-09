@@ -10,7 +10,7 @@ public class ArraysExercise {
         System.out.println("Give me a name");
         String userInput = scanner.next();
 
-        System.out.println(addPerson(Person,userInput));
+        System.out.println(Arrays.toString(addPerson(Person,userInput)));
     }
 
     public static String[] addPerson(String[] Person, String userInput){
