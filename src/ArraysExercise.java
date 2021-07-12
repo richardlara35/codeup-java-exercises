@@ -4,19 +4,19 @@ import java.util.Scanner;
 public class ArraysExercise {
 
     public static void main(String[] args) {
-        String[] Person = {"Sean", "Corey", "Mitch"};
+        int[] numbers = {1, 2, 3, 4, 5};
+        System.out.println(numbers);
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Give me a name");
-        String userInput = scanner.next();
+        Person[] persons = new Person[3];
+        persons[0] = new Person("Richard");
+        persons[1] = new Person("Corey");
+        persons[2] = new Person("Sean");
 
-        System.out.println(Arrays.toString(addPerson(Person,userInput)));
-    }
+        for (int i = 0; i < persons.length; i++) {
+            System.out.println(persons[i].toString());
+        }
+        }
+        public static String[] addPerson(){
 
-    public static String[] addPerson(String[] Person, String userInput){
-        Person = Arrays.copyOf(Person, Person.length +1);
-        Person[Person.length -1] = userInput;
-
-        return Person;
     }
 }
