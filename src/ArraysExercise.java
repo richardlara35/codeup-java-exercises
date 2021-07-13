@@ -16,7 +16,7 @@ public class ArraysExercise {
             System.out.println(persons[i].toString());
         }
         }
-        public static String[] addPerson(){
-
-    }
+//        public static String[] addPerson(){
+//
+//    }
 }
