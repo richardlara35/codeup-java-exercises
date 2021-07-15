@@ -4,6 +4,9 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Input {
+    public static void main(String[] args) {
+
+    }
     private Scanner scanner;
     private int num;
     private double numDbl;
@@ -20,26 +23,30 @@ public class Input {
     }
 
     public int getInt(int min, int max) {
-        int number;
-        do {
-            System.out.printf("Enter a number b/w %d amd %d%n", min, max);
-            number = scanner.nextInt();
-        } while (number < min || number > max);
-        return number;
+        System.out.printf("Enter a number b/w %d amd %d%n", min, max);
+        try {
+            int input = Integer.parseInt(getString());
+            if (input > min && input < max) {
+                return input;
+            } else {
+                System.out.println("Not in range");
+                return getInt(min, max);
+            }
+        } catch (Exception e) {
+            System.out.println("Invalid input");
+            return getInt(min, max);
+        }
     }
 
     public String getString() {
-        String hello = "Hello";
-        return hello;
+        System.out.println("Enter a string");
+        return scanner.nextLine();
     }
 
     public boolean yesNo() {
         System.out.println("Y/N? ");
         String userChoice = scanner.next().toLowerCase();
-        if (userChoice.equals("y")) {
-            return true;
-        }
-        return false;
+        return userChoice.equals("y");
     }
     public double getDouble(double min, double max){
         this.numDbl = getDouble();

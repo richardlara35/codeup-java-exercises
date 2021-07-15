@@ -20,7 +20,9 @@ public class Warmup0715 {
         Random random = new Random();
         int randomNum = random.nextInt(50);
         try{
-            return str.charAt(randomNum);
+           char randomChar = str.charAt(randomNum);
+            System.out.println(randomChar);
+            return randomChar;
         }catch (StringIndexOutOfBoundsException e){
             System.out.println("String index out of bounds, Random number " + randomNum + "\nString has index of " + str.length());
             return generate(str);
